@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CornerStore.ViewModels"
+             xmlns:image="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Promotions"
+             x:Class="CornerStore.Views.PromotionPage">
+    
+    <ContentPage.BindingContext>
+        <vm:PromotionPageVM/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding PromotionPageModels}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="220"/>
+                                </Grid.RowDefinitions>
+                                <image:CachedImage Source="{Binding Image}" Aspect="Fill"/>
+                            </Grid>
+                            
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Name}" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontAttributes="Bold"/>
+                                <Label Text="{Binding DayAgo}" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" TextColor="Gray"/>
+                            </Grid>
+                           
+                            <Label Text="{Binding Detail}" Margin="5,0,0,0" TextColor="Gray"/>
+                            <Label Text="Get this promo" Margin="5,0,0,5" TextColor="Green"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:image="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Sign Up"
+             x:Class="CornerStore.Views.SignUp">
+
+    <RelativeLayout>
+
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" 
+              RowSpacing="0" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="#b7956b" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Label Text="Sign Up" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="25">
+
+                </Label>
+
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"  />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+          
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Log in with Facebook" TextColor="White" FontSize="Default" Grid.Row="0" Grid.Column="0"  Font="bold" BackgroundColor="#3b5999" Margin="35,40,35,0" BorderRadius="250"/>
+
+                <image:CachedImage Source="ore.png" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Aspect="Fill" VerticalOptions="CenterAndExpand"  Grid.Row="1" Grid.Column="0" />
+
+                <Editor Placeholder="Name" FontSize="Default" TextColor="Black" Grid.Row="2" Grid.Column="0"  Margin="35,5,35,5" />
+                <Editor Placeholder="Contact no." Keyboard="Telephone" FontSize="Default" TextColor="Black" Grid.Row="3" Grid.Column="0"  Margin="35,5,35,5"/>
+                <Grid  Margin="5" HorizontalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="0">
+                    <Label Text="Date of Birth" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+                    <DatePicker  FontSize="Default" Format="D" TextColor="Black"  VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" />
+                </Grid>
+                <Editor Placeholder="Address" FontSize="Default" TextColor="Black" Grid.Row="5" Grid.Column="0"  Margin="35,05,35,05"/>
+                <Editor Placeholder="Email" Keyboard="Email" FontSize="Default" TextColor="Black" Grid.Row="6" Grid.Column="0"  Margin="35,05,35,05"/>
+
+                <Button Text="SIGN UP" TextColor="Black" FontSize="Default" Grid.Row="7" Grid.Column="0"  Font="bold" BackgroundColor="#ffffff" Margin="35,20,35,40" BorderRadius="250" Clicked="Button_Clicked"/>
+            </Grid>
+
+
+        </Grid>
+
+    </RelativeLayout>
+</ContentPage>

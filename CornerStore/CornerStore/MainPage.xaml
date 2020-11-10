@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CornerStore"
+             xmlns:view="clr-namespace:CarouselView.Controls;assembly=CarouselView"
+             xmlns:vm="clr-namespace:CornerStore.ViewModels"
+             xmlns:control="clr-namespace:CarouselView.Controls.CarouselLayout;assembly=CarouselView"
+             x:Class="CornerStore.MainPage">
+    <!--<ContentPage.BindingContext>
+        <vm:MainPageVM/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="200" >
+        <control:CarouselLayout ItemsSource="{Binding MainPageMs}">
+            <control:CarouselLayout.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}"/>
+                </DataTemplate>
+            </control:CarouselLayout.ItemTemplate>
+        </control:CarouselLayout>-->
+        <!-- Place new controls here -->
+       
+        <!--<ListView ItemsSource="{Binding MainPageMs}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <view:DotTabbedView >
+                       
+                        <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+                    </view:DotTabbedView>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>-->
+        
+
+       
+    <!--</StackLayout>-->
+
+</ContentPage>

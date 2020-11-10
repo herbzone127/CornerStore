@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CornerStore.ViewModels"
+             Title="Locate Us"
+             x:Class="CornerStore.Views.LocateUsPage">
+    <ContentPage.BindingContext>
+        <vm:LocateUsVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView Margin="5" ItemsSource="{Binding LocateUsPageModels}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Address,StringFormat='Address: {0}'}" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="{Binding PhoneNumber,StringFormat='PhoneNumber: {0}'}" FontSize="20" TextColor="Gray"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

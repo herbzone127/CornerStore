@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CornerStore.Views.Detail"
+   xmlns:vm="clr-namespace:CornerStore.ViewModels"
+             xmlns:control="clr-namespace:CarouselView.Controls.CarouselLayout;assembly=CarouselView"
+             xmlns:image="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:list="clr-namespace:HorizontalList;assembly=HorizontalList"
+             xmlns:style="clr-namespace:CornerStore.Styles"
+             >
+    <RelativeLayout >
+
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" 
+              RowSpacing="10" ColumnSpacing="0" BackgroundColor="#ded4cf">
+
+           
+
+            <Grid.RowDefinitions>
+          
+                <RowDefinition Height="*"/>
+        
+                <RowDefinition Height="150" />
+ 
+                <RowDefinition Height="*" />
+              
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <image:CachedImage x:Name="detailImg" Aspect="AspectFill" Grid.Row="0" Grid.Column="0"></image:CachedImage>
+           
+
+            <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="title" Text="" FontSize="20" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5"/>
+                <Label x:Name="price" Text="" TextColor="Red" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Margin="10,0,0,0"></Label>
+                <Label x:Name="weight" Text="" TextColor="Black" Grid.Row="1" Margin="0,0,10,0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="EndAndExpand" ></Label>
+                <Label x:Name="name" Text="" TextColor="Red" Grid.Row="2" Grid.Column="0" VerticalOptions="Start" Margin="10,0,0,0"></Label>
+                <Grid  Grid.Row="2" Grid.Column="1" VerticalOptions="EndAndExpand" HeightRequest="30" HorizontalOptions="FillAndExpand" Margin="0,0,10,5" BackgroundColor="#b7956b" >
+                    <Label Text="Add to Cart" TextColor="White"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></Label>
+                </Grid>
+               
+
+
+            </Grid>
+            
+           
+
+            <Grid Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="20,0,20,0" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="80"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="0" Text="Similar Products" Margin="5,0,0,0" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+
+                            <Label Grid.Column="1" Text="View all" TextColor="#ba9b6f" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,5,0">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </Grid>
+
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" VerticalOptions="EndAndExpand"  Margin="0,0,0,15" HorizontalOptions="Fill" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout  Grid.Row="0" BackgroundColor="White">
+
+                        <StackLayout.BindingContext>
+                            <vm:DashboardVM/>
+                        </StackLayout.BindingContext>
+
+                        <list:HorizontalList ItemsSource="{Binding GroceryModels}" ColumnSpacing="5" ListOrientation="Horizontal" BackgroundColor="#ded5cf" HorizontalOptions="Fill" >
+                            <list:HorizontalList.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid VerticalOptions="FillAndExpand" BackgroundColor="White">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="140"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="180"/>
+                                        </Grid.RowDefinitions>
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding ProductID}" IsVisible="False" ></Label>
+                                            <Image x:Name="img_Detail" Source="{Binding Image}" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center">
+
+                                            </Image>
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="15" HorizontalOptions="CenterAndExpand"/>
+                                            <Label Text="{Binding Price}" FontSize="12" HorizontalOptions="CenterAndExpand"/>
+
+                                            <Grid  BackgroundColor="#b7956b" Margin="5">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="30"/>
+                                                </Grid.RowDefinitions>
+                                                <Label TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="12" Text="Add to cart"  HorizontalOptions="CenterAndExpand"/>
+                                            </Grid>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                                                </TapGestureRecognizer>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Grid>
+                                </DataTemplate>
+                            </list:HorizontalList.ItemTemplate>
+                        </list:HorizontalList>
+
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+      
+            
+        </Grid>
+
+    </RelativeLayout>
+</ContentPage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="launcher_background">#FFFFFF</color>
+    <color name="colorPrimary">#b7956b</color>
+    <color name="colorPrimaryDark">#b7956b</color>
+    <color name="colorAccent">#FF4081</color>-->
+  <color name="primary">#b7956b</color>
+  <color name="primaryDark">#b7956b</color>
+  <color name="accent">#FF4081</color>
+  <color name="window_background">@android:color/transparent</color>
+  <color name="customHighlight">@android:color/transparent</color>
+</resources>

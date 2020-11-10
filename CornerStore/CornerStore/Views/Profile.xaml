@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:image="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="My Profile"
+             x:Class="CornerStore.Views.Profile">
+
+    <ScrollView>
+        <Grid BackgroundColor="#ded5cf">
+            <Grid RowSpacing="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="300" ></RowDefinition>
+                    <RowDefinition Height ="120" ></RowDefinition>
+                    <RowDefinition Height ="*" ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid BackgroundColor="#ded5cf" Grid.Row="0" Grid.Column="0">
+
+                    <image:CachedImage  Aspect="Fill" Source="profileback.png"/>
+
+                </Grid>
+                <Grid Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Text="Profile" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End" FontSize="Default"></Label>
+                    <image:CachedImage Source="avatar.png" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" ></image:CachedImage>
+                    <Label Text="Qudsia Saeed" Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Default" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Grid Grid.Row="3" Grid.Column="0">
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="*"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalOptions="Start" Text="PKR" Grid.Row="0" Grid.Column="0" TextColor="Black"></Label>
+                        <Label HorizontalOptions="End" Text="POINTS" Grid.Row="0" Grid.Column="1" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.Column="0">
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="*"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Text="539.00" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" TextColor="Black"></Label>
+                        <Label Text="00.00" Grid.Row="0" Grid.Column="1" HorizontalOptions="End"  TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="0" Grid.Row="1" BackgroundColor="White"  ColumnSpacing="0" RowSpacing="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <Label Text=" My Order" TextColor="Black" FontSize="Medium"   FontAttributes="None" Margin="10,0,0,0"></Label>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="0" HorizontalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid  Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <image:CachedImage Source="payment.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center"></image:CachedImage>
+                            <Label Text="Payment" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                        </Grid>
+                        <Grid  Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <image:CachedImage Source="review.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center"></image:CachedImage>
+                            <Label Text="My Review" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                        </Grid>
+                        <Grid  Grid.Row="0" Grid.Column="2" VerticalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <image:CachedImage Source="myreturn.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center"></image:CachedImage>
+                            <Label Text="My Returns" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                        </Grid>
+                        <Grid  Grid.Row="0" Grid.Column="3" VerticalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <image:CachedImage Source="cancelation.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center"></image:CachedImage>
+                            <Label Text="Cancellation" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+
+                        </Grid>
+
+
+
+
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" BackgroundColor="White" Margin="0,5,0,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Name" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <Editor Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></Editor>
+
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Email" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <Editor Grid.Row="1" Keyboard="Email" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></Editor>
+
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Contact No:" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <Editor Grid.Row="1" Keyboard="Telephone" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></Editor>
+
+                    </Grid>
+                    <Grid Grid.Row="3" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Date Of Birth" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <DatePicker Format="D" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></DatePicker>
+
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Address" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <Editor Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></Editor>
+
+                    </Grid>
+                    <Grid Grid.Row="5" Grid.Column="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Location On Map" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Margin="60,0,0,0"></Label>
+                        <Editor Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250"></Editor>
+
+                    </Grid>
+
+                </Grid>
+
+
+
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

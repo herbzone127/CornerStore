@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CornerStore.Views.Login" BackgroundColor="#ded5cf"
+             Title="LogIn/SignUp"
+             xmlns:image="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             >
+
+        <StackLayout>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+            <image:CachedImage Aspect="Fill" Source="Layer.png" Margin="0,0,0,20" />
+            <image:CachedImage Source="cs_logo.png" HeightRequest="90" WidthRequest="90" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+
+            </Grid>
+            <!--RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>-->
+        <ScrollView>
+            <Grid RowSpacing="0" VerticalOptions="FillAndExpand" ColumnSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+
+
+                <Grid Grid.Row="0" Grid.Column="0" Margin="45,0,45,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Email" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Email Please!" Keyboard="Email" Grid.Row="1" Grid.Column="0" />
+
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0" Margin="45,0,45,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Password" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Password Please!" IsPassword="True" Grid.Row="1" Grid.Column="0" />
+
+                </Grid>
+
+                <Button Text="Forget Password" TextColor="Red"  BorderColor="Transparent"
+                BackgroundColor="Transparent" FontSize="08" Grid.Row="2" Grid.Column="0"
+                    HorizontalOptions="End" Margin="0,0,45,0"></Button>
+
+                <Button Text="LOGIN" TextColor="Black" FontSize="Default" Grid.Row="3" Grid.Column="0"   BackgroundColor="#ffffff" Margin="45,0,45,10" BorderRadius="4"/>
+
+                <image:CachedImage Source="ore.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="4" Grid.Column="0" Margin="35,10,35,10"></image:CachedImage>
+
+                <Button Text="Log in with Facebook" TextColor="White" FontSize="Default" Grid.Row="5" Grid.Column="0"  Font="bold" BackgroundColor="#3b5999" Margin="45,10,45,0" BorderRadius="4"/>
+
+                <StackLayout Grid.Row="6" Grid.Column="0" VerticalOptions="EndAndExpand">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                    </Grid>
+                    <Label Text="Don't have an account?" TextColor="Black" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></Label>
+                    <Button Text="Sign Up" VerticalOptions="Start" Style="bold" TextColor="#ca995f" FontSize="Default" Grid.Row="0" Grid.Column="1"  Font="bold" BackgroundColor="Transparent" Margin="0,0,0,45" Clicked="Button_Clicked" ></Button>
+
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

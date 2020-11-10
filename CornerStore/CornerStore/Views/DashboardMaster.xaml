@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CornerStore.Views.DashboardMaster"
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="Master">
+  <Grid BackgroundColor="Black">
+        <Image Source="background.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+
+            <ListView.Header>
+            
+                    <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0"  VerticalOptions="CenterAndExpand">
+                        <circle:CircleImage Source="cs_logo.png" HeightRequest="100" WidthRequest="100" BorderThickness="0" BorderColor="White"/>
+                        <BoxView Color="Black" HeightRequest="1" WidthRequest="1" Margin="20,20,20,0" VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                   
+     
+                </Grid>
+            </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Margin="15,0,0,0" Orientation="Horizontal">
+                                <Image Source="{Binding Image}" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                                <Label VerticalOptions="FillAndExpand" 
+                                   TextColor="Black"
+                                   VerticalTextAlignment="Center" 
+                                   Text="{Binding Title}"     
+                                   FontSize="14"/>
+
+
+                                
+                            </StackLayout>
+                         
+                        </StackLayout>
+                    </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</ContentPage>

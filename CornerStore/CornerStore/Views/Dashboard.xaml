@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CornerStore.Views.Dashboard"
+             xmlns:page="clr-namespace:CornerStore.Views">
+  <MasterDetailPage.Master>
+    <page:DashboardMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+        <NavigationPage BarTextColor="Black" BarBackgroundColor="#b7956b">
+            <NavigationPage.ToolbarItems>
+                <ToolbarItem Icon="cart.png" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+            </NavigationPage.ToolbarItems>
+      <x:Arguments>
+        <page:DashboardDetail/>
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
